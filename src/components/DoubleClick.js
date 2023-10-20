@@ -4,7 +4,7 @@ import {
   Controls,
   MiniMap,
   ReactFlow,
-  useReactFlow
+  useReactFlow,
 } from 'reactflow'
 import InputBox from './InputBox'
 import Resizer from './Resizer'
@@ -59,7 +59,7 @@ export default function DoubleClick({
     [project]
   )
 
-  useEffect(() => { }, [nodes])
+  useEffect(() => {}, [nodes])
 
   return (
     <ReactFlow

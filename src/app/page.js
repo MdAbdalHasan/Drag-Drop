@@ -14,14 +14,13 @@ import { useEffect, useRef } from 'react'
 import { ReactFlowProvider, useNodesState } from 'reactflow'
 
 export default function Home() {
-
   const reactFlowWrapper = useRef(null)
   const [nodes, setNodes, onNodesChange] = useNodesState([])
 
   const db = getFirestore(app)
 
   useEffect(() => {
-    ; (async () => {
+    ;(async () => {
       const querySnapshot = await getDocs(collection(db, 'nodes'))
       const data = JSON.parse(
         querySnapshot.docs[0]._document.data.value.mapValue.fields.nodes

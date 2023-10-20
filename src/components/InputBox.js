@@ -7,7 +7,6 @@ export default function InputBox({ id }) {
     <div
       className={`dndnode ${id} w-60`}
       onDragStart={(event) => onDragStart(event, 'output')}
-
     >
       <input
         type="text"
